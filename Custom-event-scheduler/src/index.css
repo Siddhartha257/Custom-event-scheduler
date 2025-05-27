@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: #f5f5f5;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Calendar specific styles */
+.e-schedule {
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.e-schedule .e-schedule-toolbar {
+  background-color: #fff;
+  border-radius: 12px 12px 0 0;
+  padding: 12px;
+}
+
+.e-schedule .e-schedule-toolbar .e-toolbar-items {
+  background-color: transparent;
+}
+
+.e-schedule .e-schedule-toolbar .e-toolbar-right {
+  background-color: transparent;
+}
+
+.e-schedule .e-schedule-toolbar .e-toolbar-item button {
+  border-radius: 6px;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+.e-schedule .e-schedule-toolbar .e-toolbar-item button:hover {
+  background-color: #f0f0f0;
+}
+
+.e-schedule .e-content {
+  background-color: #fff;
+  border-radius: 0 0 12px 12px;
+}
+
+.e-schedule .e-work-cells {
+  border-color: #e0e0e0;
+}
+
+.e-schedule .e-current-time {
+  color: #2563eb;
+}
+
+.e-schedule .e-appointment {
+  border-radius: 6px;
+  background-color: #2563eb;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.e-schedule .e-appointment:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Overlapping events styles */
+.e-schedule .e-appointment.e-overlap {
+  background-color: #ef4444;
+  border-left: 4px solid #dc2626;
+}
+
+.e-schedule .e-appointment.e-overlap::before {
+  content: "⚠️";
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  font-size: 12px;
+}
+
+.e-schedule .e-appointment.e-overlap .e-subject {
+  color: white;
+  font-weight: 500;
+}
+
+/* DatePicker styles */
+.e-datepicker {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.e-datepicker .e-calendar {
+  border-radius: 8px;
+}
+
+.e-datepicker .e-calendar .e-header {
+  background-color: #2563eb;
+  color: white;
+  border-radius: 8px 8px 0 0;
+}
+
+.e-datepicker .e-calendar .e-content table td.e-selected {
+  background-color: #2563eb;
+  color: white;
+  border-radius: 50%;
+}
+
+/* Header styles */
+.header {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.header p {
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
